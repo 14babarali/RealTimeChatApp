@@ -43,3 +43,8 @@ sendMessageButton.addEventListener('click', () => {
         messageInput.value = ''; // Clear the input
     }
 });
+
+// Listen for list of online users (optional)
+socket.on('userList', (users) => {
+    console.log('Online Users:', users);
+});
